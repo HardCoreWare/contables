@@ -1,0 +1,14 @@
+{
+
+    "google":{
+
+        "bigQuery":{
+
+            "dataset":"CONTABLES",
+            "projectId":""
+
+        }
+
+    }
+
+}
