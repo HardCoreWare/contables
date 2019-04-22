@@ -2,7 +2,7 @@
 
 namespace Pit\Multiva\Contables;
 
-class Account extends Table{
+class Concept extends Table{
 
     public function __construct($bigQuery){
 
@@ -12,7 +12,7 @@ class Account extends Table{
 
     public function index(){
 
-       $sql = "SELECT id,superConcepto,concepto,cuenta".
+       $sql = "SELECT id,superConcepto,concepto".
         " FROM `informe-211921.CONTABLES.Conceptos`".
         " WHERE ARRAY_LENGTH(cuenta)>0".
         " ORDER BY id ;";

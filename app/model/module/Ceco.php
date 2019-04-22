@@ -2,7 +2,7 @@
 
 namespace Pit\Multiva\Contables;
 
-class Cecos extends Table{
+class Ceco extends Table{
 
     public function __construct($bigQuery){
 
