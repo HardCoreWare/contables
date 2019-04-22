@@ -12,6 +12,7 @@ class Account extends Table{
 
     public function index(){
 
+        echo('ok');
 
     }
 
