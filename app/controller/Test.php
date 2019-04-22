@@ -8,6 +8,12 @@ class Test extends Controller{
 
     }
 
+    public function parrot($word){
+
+        echo($word);
+
+    }
+
 }
 
 ?>
