@@ -16,9 +16,7 @@ class Account extends Table{
         " FROM `informe-211921.CONTABLES.Conceptos`".
         " WHERE ARRAY_LENGTH(cuenta)>0".
         " ORDER BY id ;";
-
         $cuentas = $this->bigQuery->select($sql);
-
         return $cuentas;
 
     }
