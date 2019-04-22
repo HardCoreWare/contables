@@ -1,6 +1,6 @@
 <?php
 
-class Test extends Controller{
+class Test{
 
     public function index(){
 
