@@ -30,8 +30,6 @@ class Router {
                 $this->method = $url[1];  unset($url[1]);
                 $this->parameters = $url ? array_values($url) : [];
 
-            }else{
-
             }
 
         }
