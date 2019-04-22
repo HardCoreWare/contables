@@ -24,8 +24,19 @@ class Router {
             $url=filter_var($url,FILTER_SANITIZE_URL);
             $url=explode('/',$url);
             $this->controller = $url[0]; unset($url[0]);
-            $this->method = $url[1];  unset($url[1]);
-            $this->parameters = $url ? array_values($url) : [];
+
+            if(isset($url[1])){
+
+                $this->method = $url[1];  unset($url[1]);
+                $this->parameters = $url ? array_values($url) : [];
+
+            }else{
+
+
+
+            }
+
+
 
         }
 
