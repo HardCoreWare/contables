@@ -17,6 +17,8 @@ class Bseg extends Table{
         " FROM `informe-211921.CONTABLES.Bsegaio`".
         " WHERE KOSTL IN (SELECT numero FROM `informe-211921.CONTABLES.Cecos`)".
         " ORDER BY CAST(BUDAT AS INT64)";
+        $bseg=$this->bigQuery->select($sql);
+        return $bseg;
 
     }
 
