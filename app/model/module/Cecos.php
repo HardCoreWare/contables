@@ -1,5 +1,7 @@
 <?php
 
+namespace Pit\Multiva\Contables;
+
 class Cecos extends Table{
 
     public function __construct($bigQuery){
