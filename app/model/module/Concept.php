@@ -12,10 +12,10 @@ class Concept extends Table{
 
     public function index(){
 
-       $sql = "SELECT id,superConcepto,concepto".
-        " FROM `informe-211921.CONTABLES.Conceptos`".
-        " WHERE ARRAY_LENGTH(cuenta)>0".
-        " ORDER BY id ;";
+        $sql = "SELECT id AS idConcepto, superConcepto, concepto, prorrateable ".
+        " FROM `informe-211921.CONTABLES.Conceptos` ORDER BY id";
+
+
         $cuentas = $this->bigQuery->select($sql);
         return $cuentas;
 
