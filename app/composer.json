@@ -1,6 +1,0 @@
-{
-    "require": {
-        "google/cloud-bigquery": "^1.6",
-        "slim/slim": "^3.12"
-    }
-}
