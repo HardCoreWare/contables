@@ -12,7 +12,15 @@ class Account extends Table{
 
     public function index(){
 
-        echo('ok');
+       $sql = "SELECT id,superConcepto,concepto,".
+        " (SELECT * FROM UNNEST(cuenta)) AS cuenta".
+        " FROM `informe-211921.CONTABLES.Conceptos`".
+        " WHERE ARRAY_LENGTH(cuenta)>0".
+        " ORDER BY id ;";
+
+        $cuentas = $this->bigQuery->select($sql);
+
+        return $cuentas;
 
     }
 
