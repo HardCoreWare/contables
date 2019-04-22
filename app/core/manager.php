@@ -8,5 +8,4 @@ require_once '../app/model/primitive/Table.php';
 require_once '../app/model/module/Cecos.php';
 require_once '../app/model/module/Account.php';
 
-
 ?>
