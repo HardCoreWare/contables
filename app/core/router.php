@@ -35,6 +35,8 @@ class Router {
     public function loadController(){
     
         $route='../app/controller/'.$this->controller.'.php';
+
+        echo($route);
     
         // de existir la clase llevamos a cabo la carga
         if(file_exists($route)){
