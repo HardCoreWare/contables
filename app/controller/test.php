@@ -14,6 +14,12 @@ class Test{
 
     }
 
+    public function wellcome(){
+
+        echo('wellcome');
+
+    }
+
 }
 
 ?>
