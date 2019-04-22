@@ -1,6 +1,6 @@
 <?php
 
-class cuentas{
+class conceptos{
 
     public function __construct(){
 
