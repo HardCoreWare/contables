@@ -11,9 +11,9 @@ class cuentas{
 
     public function index(){
 
-        $cecosModel = new Pit\Multiva\Contables\Account(BigQuery::getInstance('informe-211921'));
-        $cecos = $cecosModel->index();
-        echo(json_encode($cecos));
+        $accountModel = new Pit\Multiva\Contables\Account(BigQuery::getInstance('informe-211921'));
+        $account = $accountModel->index();
+        echo(json_encode($account));
         
     }
 
