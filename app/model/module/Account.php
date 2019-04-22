@@ -12,7 +12,7 @@ class Account extends Table{
 
     public function index(){
 
-        $sql = "SELECT id,numero AS ceco,area,sucursal FROM `informe-211921.CONTABLES.Cecos` ORDER BY id;";
+        $sql = "SELECT idConcepto, cuenta FROM `informe-211921.CONTABLES.Cuentas` ORDER BY id;";
         $cecos = $this->bigQuery->select($sql);
         return $cecos;
 
