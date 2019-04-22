@@ -3,9 +3,8 @@
 class Router {
 
     //por default clase, metodo y parametro
-    private $folder = 'test';
     private $controller='test';
-    private $method = 'testing';
+    private $method = 'index';
     private $parameters = [];
 
     public function __construct(){
@@ -24,9 +23,8 @@ class Router {
             $url=rtrim($_GET['url'],'/');
             $url=filter_var($url,FILTER_SANITIZE_URL);
             $url=explode('/',$url);
-            $this->folder = $url[0]; unset($url[0]);
-            $this->controller = $url[1]; unset($url[1]);
-            $this->method = $url[2];  unset($url[2]);
+            $this->controller = $url[0]; unset($url[0]);
+            $this->method = $url[1];  unset($url[1]);
             $this->parameters = $url ? array_values($url) : [];
 
         }
@@ -36,7 +34,7 @@ class Router {
     // cargamos clase del elemento 0 de la URL
     public function loadController(){
     
-        $route='../app/controller/'.$this->folder.'/'.$this->controller.'.php';
+        $route='../app/controller/'.$this->controller.'.php';
     
         // de existir la clase llevamos a cabo la carga
         if(file_exists($route)){
