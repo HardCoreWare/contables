@@ -5,7 +5,7 @@
         "bigQuery":{
 
             "dataset":"CONTABLES",
-            "projectId":""
+            "projectId":"informe-211921"
 
         }
 
