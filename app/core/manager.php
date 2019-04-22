@@ -7,5 +7,7 @@ require_once '../app/model/primitive/Connection.php';
 require_once '../app/model/primitive/Table.php';
 require_once '../app/model/module/Cecos.php';
 require_once '../app/model/module/Account.php';
+require_once '../app/model/module/Bseg.php';
+
 
 ?>
