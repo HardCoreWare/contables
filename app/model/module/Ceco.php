@@ -12,7 +12,7 @@ class Ceco extends Table{
 
     public function index(){
 
-        $sql = "SELECT id,numero AS ceco,area,sucursal FROM `informe-211921.CONTABLES.Cecos` ORDER BY id;";
+        $sql = "SELECT idSucursal, ceco FROM `informe-211921.CONTABLES.Cecos` ORDER BY id;";
         $cecos = $this->bigQuery->select($sql);
         return $cecos;
 
