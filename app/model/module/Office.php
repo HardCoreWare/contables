@@ -2,7 +2,7 @@
 
 namespace Pit\Multiva\Contables;
 
-class Concept extends Table{
+class Office extends Table{
 
     public function __construct($bigQuery){
 
@@ -13,9 +13,7 @@ class Concept extends Table{
     public function index(){
 
         $sql = "SELECT id AS idSucursal, area, sucursal ".
-        " FROM `informe-211921.CONTABLES.Conceptos` ORDER BY id";
-
-
+        " FROM `informe-211921.CONTABLES.Sucursales` ORDER BY id";
         $cuentas = $this->bigQuery->select($sql);
         return $cuentas;
 
