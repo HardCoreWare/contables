@@ -11,6 +11,4 @@ require_once '../app/model/module/Concept.php';
 require_once '../app/model/module/Bseg.php';
 require_once '../app/model/module/Office.php';
 
-
-
 ?>

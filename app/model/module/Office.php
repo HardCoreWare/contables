@@ -13,7 +13,8 @@ class Office extends Table{
     public function index(){
 
         $sql = "SELECT id AS idSucursal, area, sucursal ".
-        " FROM `informe-211921.CONTABLES.Sucursales` ORDER BY id";
+        " FROM `informe-211921.CONTABLES.Sucursales`".
+        " ORDER BY id";
         $cuentas = $this->bigQuery->select($sql);
         return $cuentas;
 
