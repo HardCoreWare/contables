@@ -16,7 +16,7 @@ class Bseg extends Table{
         " CONCAT(SUBSTR(BUDAT,1,4),'/',SUBSTR(BUDAT,5,2),'/',SUBSTR(BUDAT,7,2)) AS fecha".
         " FROM `informe-211921.CONTABLES.Bsegaio`".
         " WHERE KOSTL IN (SELECT DISTINCT(ceco) FROM `informe-211921.CONTABLES.Ceco`)".
-        " AND HKONT IN(SELECT DISTINCT(ceco) FROM `informe-211921.CONTABLES.Ceco`)".
+        " AND HKONT IN(SELECT DISTINCT(cuenta) FROM `informe-211921.CONTABLES.Cuentas`)".
         " ORDER BY CAST(BUDAT AS INT64)";
         $bseg=$this->bigQuery->select($sql);
         return $bseg;
