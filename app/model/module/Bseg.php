@@ -24,7 +24,7 @@ class Bseg extends Table{
 
     }
 
-    public function month($month){
+    public function mes($month){
 
         $sql =
         " SELECT BELNR AS numeroDocumento, BLART AS tipoDocumento, KOSTL AS referencia, PSWSL AS moneda, BUKRS AS sociedadSap, ROUND(CAST(DMBTR AS FLOAT64),2) AS importe, KOSTL AS ceco, BKTXT AS descripcion, HKONT AS cuenta,".
