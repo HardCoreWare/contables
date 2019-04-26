@@ -34,6 +34,8 @@ class Bseg extends Table{
         " AND CAST(SUBSTR(BUDAT,5,2) AS INT64) = ".$month.
         " AND HKONT IN(SELECT DISTINCT(cuenta) FROM `informe-211921.CONTABLES.Cuentas`)".
         " ORDER BY CAST(BUDAT AS INT64)";
+        $bseg=$this->bigQuery->select($sql);
+        return $bseg;
 
     }
 
