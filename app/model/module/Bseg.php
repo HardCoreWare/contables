@@ -23,7 +23,7 @@ class Bseg extends Table{
 
         for ($i=0; $i <count($bseg) ; $i++) { 
 
-            $bseg['id']=$i;
+            $bseg['id']=$i+1;
 
         }
 
