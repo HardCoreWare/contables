@@ -20,7 +20,7 @@ class Bseg extends Controller{
     public function mes($month){
 
         $accountModel = new Pit\Multiva\Contables\Bseg(BigQuery::getInstance('informe-211921'));
-        $account = $accountModel->mes();
+        $account = $accountModel->mes($month);
         echo(json_encode($account));
 
     }
