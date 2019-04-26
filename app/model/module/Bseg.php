@@ -13,7 +13,7 @@ class Bseg extends Table{
     public function index(){
 
         $sql =
-        " SELECT BELNR AS numeroDocumento, VORGN AS tipoDocumento, KOSTL AS referencia, PSWSL AS moneda, BUKRS AS sociedadSap, CAST(DMBTR AS FLOAT64) AS importe, KOSTL AS ceco, BKTXT AS descripcion, HKONT AS cuenta,".
+        " SELECT BELNR AS numeroDocumento, VORGN AS tipoDocumento, KOSTL AS referencia, PSWSL AS moneda, BUKRS AS sociedadSap, ROUND(CAST(DMBTR AS FLOAT64),2) AS importe, KOSTL AS ceco, BKTXT AS descripcion, HKONT AS cuenta,".
         " CONCAT(SUBSTR(BUDAT,1,4),'-',SUBSTR(BUDAT,5,2),'-',SUBSTR(BUDAT,7,2)) AS fecha".
         " FROM `informe-211921.CONTABLES.Bsegaio`".
         " WHERE KOSTL IN (SELECT DISTINCT(ceco) FROM `informe-211921.CONTABLES.Ceco`)".

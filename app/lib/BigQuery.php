@@ -120,6 +120,7 @@ class BigQuery implements BigQueryI{
         $loadJobConfig->allowJaggedRows($settings['allowJaggedRows']);
         $loadJobConfig->nullMarker($settings['nullMarker']);
 
+        //creacion
         $loadJobConfig->writeDisposition($disposition['write']);
         $loadJobConfig->createDisposition($disposition['create']);
 
