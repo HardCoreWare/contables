@@ -21,6 +21,14 @@ class Bseg extends Table{
         " ORDER BY CAST(BUDAT AS INT64) ";
         $bseg=$this->bigQuery->select($sql);
 
+        $this->bigQuery=null;
+
+        for ($i=0; $i <count($bseg) ; $i++) { 
+
+            $bseg[$i]['id']=$i+1;
+
+        }
+
         return $bseg;
 
     }
