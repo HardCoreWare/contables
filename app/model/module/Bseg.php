@@ -20,6 +20,13 @@ class Bseg extends Table{
         " AND HKONT IN (SELECT DISTINCT(cuenta) FROM `informe-211921.CONTABLES.Cuentas`)".
         " ORDER BY CAST(BUDAT AS INT64) ";
         $bseg=$this->bigQuery->select($sql);
+
+        for ($i=0; $i <count($bseg) ; $i++) { 
+
+            $bseg['id']=$i;
+
+        }
+
         return $bseg;
 
     }
@@ -35,13 +42,6 @@ class Bseg extends Table{
         " AND HKONT IN (SELECT DISTINCT(cuenta) FROM `informe-211921.CONTABLES.Cuentas`)".
         " ORDER BY CAST(BUDAT AS INT64) ";
         $bseg=$this->bigQuery->select($sql);
-
-
-        for ($i=0; $i <count($bseg) ; $i++) { 
-
-            $bseg['id']=$i;
-
-        }
 
         return $bseg;
 
