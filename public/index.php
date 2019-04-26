@@ -1,6 +1,6 @@
 <?php
 
-ini_set('memory_limit', '-1');
+ini_set('memory_limit', '8000M');
 
 //
 require_once '../app/vendor/autoload.php';
